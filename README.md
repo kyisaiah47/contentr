@@ -3,6 +3,9 @@
 
 An intelligent AI system that automates entire content marketing workflows using TiDB Serverless vector search and multi-step agentic AI.
 
+[![YouTube Demo](https://img.shields.io/badge/▶️%20Watch%20on%20YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=oD5264ALLCo)
+[![Watch the demo](https://img.youtube.com/vi/oD5264ALLCo/maxresdefault.jpg)](https://www.youtube.com/watch?v=oD5264ALLCo)
+
 ## 🚀 Live Demo
 - **Frontend**: https://contentr-one.vercel.app/
 - **API Docs**: https://contentr-production.up.railway.app/docs
