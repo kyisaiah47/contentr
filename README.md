@@ -1,78 +1,60 @@
-# 🤖 Contentr
-**TiDB AgentX Hackathon 2025 - Autonomous AI Content Marketing Agent**
+<div align="center">
 
-An intelligent AI system that automates entire content marketing workflows using TiDB Serverless vector search and multi-step agentic AI.
+<!-- BANNER_PLACEHOLDER -->
 
-[![YouTube Demo](https://img.shields.io/badge/▶️%20Watch%20on%20YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=oD5264ALLCo)
-[![Watch the demo](https://img.youtube.com/vi/oD5264ALLCo/maxresdefault.jpg)](https://www.youtube.com/watch?v=oD5264ALLCo)
+# ✍️ Contentr
 
-## 🚀 Live Demo
-- **Frontend**: https://contentr-one.vercel.app/
-- **API Docs**: https://contentr-production.up.railway.app/docs
-- **Content Gap Analysis**: https://contentr-production.up.railway.app/api/v1/analysis/content-gaps-sync?niche=API%20security
-- **Calendar Generation**: https://contentr-production.up.railway.app/api/v1/calendar/generate-sync?niche=DevOps&days=7
+**AI content strategy engine — from idea to published, fully automated with vector-powered insights**
 
-## 🧠 Multi-Step Agentic Workflow
-1. **Data Ingestion** → Social APIs + OpenAI embeddings → TiDB Serverless
-2. **Vector Search** → TiDB cosine similarity finds content gaps
-3. **AI Analysis** → GPT-4 generates insights and predictions
-4. **Strategy Generation** → Automated content calendars with optimization
-5. **Performance Tracking** → Continuous strategy refinement
-6. **External Integration** → Buffer/Hootsuite APIs + Slack notifications
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TiDB](https://img.shields.io/badge/TiDB_Serverless-CC0200?style=for-the-badge&logo=pingcap&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-## 🏗️ TiDB Serverless Integration
-```sql
--- Content similarity matching
-SELECT content_text, engagement_rate
-FROM content_posts
-ORDER BY VEC_COSINE_DISTANCE(content_embedding, :query_embedding)
-LIMIT 10;
+</div>
 
--- Trend discovery
-SELECT topic, trend_score, related_keywords
-FROM trending_topics
-WHERE VEC_COSINE_DISTANCE(topic_embedding, :niche_embedding) < 0.3;
-```
+<br/>
 
-**Advanced Features**: Vector indexes, full-text search, JSON columns, generated columns, auto-scaling
+Contentr is an end-to-end autonomous content marketing engine that ingests social signals, runs cosine-similarity vector search against TiDB Serverless to surface content gaps, and generates AI-driven content calendars — all without manual intervention. From trend discovery to publishing via Buffer/Hootsuite and Slack notifications, every step in the workflow is automated and continuously refined using GPT-4 insights.
 
-## 📊 Business Impact
-- **90% reduction** in content planning time (10+ hours → 1 hour/week)
-- **40% improvement** in engagement through data-driven insights
-- **$50k+ annual value** for marketing teams
+## ✨ Features
+
+- **Vector-Powered Gap Analysis** — TiDB Serverless cosine similarity (`VEC_COSINE_DISTANCE`) surfaces under-served topics across your niche in real time
+- **Autonomous 6-Step Agent** — Ingestion → vector search → AI analysis → strategy generation → performance tracking → external publishing, fully orchestrated
+- **AI Content Calendar** — GPT-4 generates optimized weekly publishing schedules tailored to engagement data
+- **Social API Integration** — Pulls live signals from social platforms; publishes directly through Buffer and Hootsuite APIs
+- **Instant ROI** — 90% reduction in content planning time (10+ hours → ~1 hour/week) with 40% engagement uplift from data-driven recommendations
+- **Production-Ready API** — Full FastAPI backend with interactive Swagger docs, auto-scaling via Railway, and a Next.js 14 frontend on Vercel
+
+## 🎥 Demo
+
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=oD5264ALLCo)
 
 ## 🛠️ Tech Stack
-**Backend**: Python, FastAPI, TiDB Serverless, OpenAI GPT-4, Redis  
-**Frontend**: TypeScript, Next.js 14, Tailwind CSS  
-**Infrastructure**: Docker, Railway, Vercel
 
-## 🚀 Quick Start
+TiDB Serverless · Python · FastAPI · OpenAI GPT-4 · Redis · TypeScript · Next.js 14 · Tailwind CSS · Docker · Railway · Vercel
+
+## 🚀 Getting Started
+
 ```bash
-# Clone and setup
+# Clone and configure
 git clone https://github.com/kyisaiah47/contentr.git
 cd contentr
-cp .env.example .env  # Add your API keys
+cp .env.example .env   # Add TiDB, OpenAI, and social API keys
 
-# Start with Docker
+# Start all services
 docker-compose up -d
 
-# Visit http://localhost:3000
+# Frontend → http://localhost:3000
+# API Docs → http://localhost:8000/docs
 ```
 
-## 🎯 Hackathon Requirements Met
-✅ **Multi-Step Agentic AI**: 6 autonomous workflow steps  
-✅ **TiDB Serverless**: Vector search + SQL capabilities  
-✅ **Real-World Impact**: Saves 90% planning time  
-✅ **Production Ready**: Full API docs + scalable architecture  
-✅ **Open Source**: MIT license
+**Live links**
+- Frontend: https://contentr-one.vercel.app/
+- API Docs: https://contentr-production.up.railway.app/docs
 
-## 📖 Key APIs
-- `GET /api/v1/analysis/content-gaps-sync?niche={niche}` - AI content gap analysis
-- `GET /api/v1/calendar/generate-sync?niche={niche}&days={days}` - Content strategy generation
-- `GET /api/v1/dashboard/overview` - Performance metrics
+## 📄 License
 
-## 🏆 Built for TiDB AgentX Hackathon 2025
-*Forging Agentic AI for Real-World Impact*
-
----
-**License**: MIT | **Demo Video**: [Link] | **Team**: Isaiah Kim
+MIT
